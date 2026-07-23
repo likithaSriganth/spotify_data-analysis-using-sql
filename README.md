@@ -246,27 +246,6 @@ This optimization shows how indexing can drastically reduce query time, improvin
 
 ---
 
-# Project Structure
-
-
-Spotify SQL Project
-│
-├── Dataset
-│   └── spotify.csv
-│
-├── SQL Scripts
-│   ├── Database Creation.sql
-│   ├── Easy Queries.sql
-│   ├── Medium Queries.sql
-│   ├── Advanced Queries.sql
-│   └── Query Optimization.sql
-│
-├── Screenshots
-│
-└── README.md
-
-
----
 
 # How to Run the Project
 

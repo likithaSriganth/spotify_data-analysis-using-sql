@@ -133,13 +133,36 @@ The project contains SQL questions categorized into three difficulty levels.
 2. List all albums along with their respective artists.
 3. Get the total number of comments for tracks where `licensed = TRUE`.
 4. Find all tracks that belong to the album type `single`.
+```sql
+SELECT track
+FROM spotify
+WHERE album_type = 'single';
+```
+
 5. Count the total number of tracks by each artist.
 
 ### Medium Level
 1. Calculate the average danceability of tracks in each album.
 2. Find the top 5 tracks with the highest energy values.
+```sql
+SELECT track,
+       artist,
+       energy
+FROM spotify
+ORDER BY energy DESC
+LIMIT 5;
+```
+
 3. List all tracks along with their views and likes where `official_video = TRUE`.
 4. For each album, calculate the total views of all associated tracks.
+```sql
+SELECT album,
+       SUM(views) AS total_views
+FROM spotify
+GROUP BY album
+ORDER BY total_views DESC;
+```
+
 5. Retrieve the track names that have been streamed on Spotify more than YouTube.
 
 ### Advanced Level
@@ -160,14 +183,14 @@ SELECT
 	album,
 	highest_energy - lowest_energery as energy_diff
 FROM cte
-ORDER BY 2 DESC
+ORDER BY 2 DESC;
 ```
    
 5. Find tracks where the energy-to-liveness ratio is greater than 1.2.
 6. Calculate the cumulative sum of likes for tracks ordered by the number of views, using window functions.
 
 
-Here’s an updated section for your **Spotify Advanced SQL Project and Query Optimization** README, focusing on the query optimization task you performed. You can include the specific screenshots and graphs as described.
+
 
 ---
 

@@ -5,11 +5,68 @@ Project Category: Advanced
 ![Spotify Logo](https://github.com/najirh/najirh-Spotify-Data-Analysis-using-SQL/blob/main/spotify_logo.jpg)
 
 ## Overview
-This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, performing SQL queries of varying complexity (easy, medium, and advanced), and optimizing query performance. The primary goals of the project are to practice advanced SQL skills and generate valuable insights from the dataset.
 
-```sql
--- create table
+This project focuses on analyzing a Spotify music dataset using PostgreSQL. The objective is to practice SQL concepts by exploring real-world music data and generating useful insights from tracks, albums, artists, streaming statistics, and user engagement.
+
+The project starts by creating a database table, importing the dataset, and performing SQL queries ranging from basic data retrieval to advanced analytical queries. It also demonstrates query optimization techniques to improve database performance.
+
+---
+
+## 🎯 Project Objectives
+
+- Import and manage Spotify dataset using PostgreSQL.
+- Practice SQL from beginner to advanced level.
+- Perform data analysis using aggregate functions.
+- Learn GROUP BY, HAVING, Window Functions, CTEs, and Subqueries.
+- Optimize SQL queries using indexes.
+- Generate meaningful business insights from music streaming data.
+
+---
+
+## 📂 Dataset Information
+
+The dataset contains details about Spotify tracks and their performance across different platforms.
+
+### Dataset Includes
+
+- Artist Name
+- Track Name
+- Album Name
+- Album Type
+- Danceability
+- Energy
+- Loudness
+- Speechiness
+- Acousticness
+- Instrumentalness
+- Liveness
+- Valence
+- Tempo
+- Duration
+- Views
+- Likes
+- Comments
+- Streams
+- Licensed Status
+- Official Video
+- Most Played Platform
+
+---
+
+## 🛠️ Technologies Used
+
+- PostgreSQL
+- pgAdmin 4
+- SQL
+- Git & GitHub
+
+---
+
+# Database Creation
+
+sql
 DROP TABLE IF EXISTS spotify;
+
 CREATE TABLE spotify (
     artist VARCHAR(255),
     track VARCHAR(255),
@@ -36,37 +93,41 @@ CREATE TABLE spotify (
     energy_liveness FLOAT,
     most_played_on VARCHAR(50)
 );
-```
-## Project Steps
 
-### 1. Data Exploration
-Before diving into SQL, it’s important to understand the dataset thoroughly. The dataset contains attributes such as:
-- `Artist`: The performer of the track.
-- `Track`: The name of the song.
-- `Album`: The album to which the track belongs.
-- `Album_type`: The type of album (e.g., single or album).
-- Various metrics such as `danceability`, `energy`, `loudness`, `tempo`, and more.
 
-### 4. Querying the Data
-After the data is inserted, various SQL queries can be written to explore and analyze the data. Queries are categorized into **easy**, **medium**, and **advanced** levels to help progressively develop SQL proficiency.
+---
 
-#### Easy Queries
-- Simple data retrieval, filtering, and basic aggregations.
-  
-#### Medium Queries
-- More complex queries involving grouping, aggregation functions, and joins.
-  
-#### Advanced Queries
-- Nested subqueries, window functions, CTEs, and performance optimization.
+# Project Workflow
 
-### 5. Query Optimization
-In advanced stages, the focus shifts to improving query performance. Some optimization strategies include:
-- **Indexing**: Adding indexes on frequently queried columns.
-- **Query Execution Plan**: Using `EXPLAIN ANALYZE` to review and refine query performance.
+### Step 1 – Data Preparation
+
+- Download the Spotify dataset.
+- Create the database table.
+- Import the dataset into PostgreSQL.
+
+---
+
+### Step 2 – Data Exploration
+
+Explore the dataset to understand its structure and identify important columns before writing analytical queries.
+
+Examples include:
+
+- Total number of tracks
+- Unique artists
+- Album types
+- Platform distribution
+- Missing values
+
+---
+
+### Step 3 – SQL Analysis
+
+The project contains SQL questions categorized into three difficulty levels.
   
 ---
 
-## 15 Practice Questions
+##  Questions
 
 ### Easy Level
 1. Retrieve the names of all tracks that have more than 1 billion streams.
@@ -146,13 +207,47 @@ To improve query performance, we carried out the following optimization process:
 
 This optimization shows how indexing can drastically reduce query time, improving the overall performance of our database operations in the Spotify project.
 ---
+# Skills Demonstrated
 
-## Technology Stack
-- **Database**: PostgreSQL
-- **SQL Queries**: DDL, DML, Aggregations, Joins, Subqueries, Window Functions
-- **Tools**: pgAdmin 4 (or any SQL editor), PostgreSQL (via Homebrew, Docker, or direct installation)
+- SQL Fundamentals
+- Database Design
+- Data Filtering
+- Aggregate Functions
+- GROUP BY
+- HAVING Clause
+- Window Functions
+- CTEs
+- Ranking Functions
+- Query Optimization
+- Indexing
+- Performance Analysis
 
-## How to Run the Project
+---
+
+# Project Structure
+
+
+Spotify SQL Project
+│
+├── Dataset
+│   └── spotify.csv
+│
+├── SQL Scripts
+│   ├── Database Creation.sql
+│   ├── Easy Queries.sql
+│   ├── Medium Queries.sql
+│   ├── Advanced Queries.sql
+│   └── Query Optimization.sql
+│
+├── Screenshots
+│
+└── README.md
+
+
+---
+
+# How to Run the Project
+
 1. Install PostgreSQL and pgAdmin (if not already installed).
 2. Set up the database schema and tables using the provided normalization structure.
 3. Insert the sample data into the respective tables.
@@ -161,17 +256,37 @@ This optimization shows how indexing can drastically reduce query time, improvin
 
 ---
 
-## Next Steps
-- **Visualize the Data**: Use a data visualization tool like **Tableau** or **Power BI** to create dashboards based on the query results.
-- **Expand Dataset**: Add more rows to the dataset for broader analysis and scalability testing.
-- **Advanced Querying**: Dive deeper into query optimization and explore the performance of SQL queries on larger datasets.
+
+# Key Learning Outcomes
+
+After completing this project, you will be able to:
+
+- Create SQL databases and tables
+- Import datasets into PostgreSQL
+- Write SQL queries of different difficulty levels
+- Analyze large datasets efficiently
+- Use Window Functions for advanced analytics
+- Improve SQL performance using indexes
+- Apply SQL concepts to real-world datasets
 
 ---
 
-## Contributing
-If you would like to contribute to this project, feel free to fork the repository, submit pull requests, or raise issues.
+# Future Improvements
+
+Some additional enhancements that can be added to this project include:
+
+- Interactive Power BI Dashboard
+- Tableau Visualization
+- Python Data Analysis
+- Machine Learning for Music Prediction
+- Spotify Recommendation Analysis
 
 ---
 
-## License
-This project is licensed under the MIT License.
+# Conclusion
+
+This project provides practical experience in SQL using a real-world Spotify dataset. It covers everything from basic querying to advanced analytical techniques while also introducing database optimization strategies. It is an excellent project for improving SQL skills and showcasing database knowledge in a portfolio.
+
+
+---
+
